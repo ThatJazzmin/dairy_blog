@@ -1,0 +1,60 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing All Posts</h1>
+
+
+<% @travel_var.each do |travel| %>
+      <div class="entry col-sm-12">
+        <p class="col-lg-4 col-md-4 col-sm-12"><%= image_tag travel.image %></p>
+        
+        <h2><%= travel.title %></h2>
+        
+        <p><%= travel.description %></p>
+        
+        <p class="timestamp"><%= travel.created_at.strftime ("%e.%b %Y | %R") %></p>
+
+        <button type="button" class="btn btn-primary"> 
+          <%= link_to 'Show', travel %>
+        </button>
+          
+        <button type="button" class="btn btn-primary">
+          <%= link_to 'Edit', edit_travel_path(travel) %>
+        </button>
+          
+        <button type="button" class="btn btn-primary">
+          <%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </button>
+
+      </div>    
+    
+<% end %>
+
+<h1>craftings</h1>
+<% @crafting_var.each do |crafting| %>
+     <div class="entry col-sm-12">
+        <p class="col-lg-4 col-md-4 col-sm-12"><%= image_tag crafting.image %></p>
+
+        <h2><%= crafting.title %></h2>
+
+        <p><%= crafting.description %></p>
+        
+        <p class="timestamp"><%= crafting.created_at.strftime ("%e.%b %Y | %R") %></p>
+
+          <button type="button" class="btn btn-primary">
+            <%= link_to 'Show', crafting %>
+          </button>
+        
+          <button type="button" class="btn btn-primary">
+            <%= link_to 'Edit', edit_crafting_path(crafting) %>
+          </button>
+        
+          <button type="button" class="btn btn-primary">
+            <%= link_to 'Destroy', crafting, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </button>
+      </div>
+    <% end %>
+
+
+</div>

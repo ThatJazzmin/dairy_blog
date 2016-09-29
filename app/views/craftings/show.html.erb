@@ -1,0 +1,25 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @crafting.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @crafting.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%=image_tag "#{@crafting.image}" %>
+</p>
+
+<button type="button" class="btn btn-primary">
+	<%= link_to 'Edit', edit_crafting_path(@crafting) %>
+</button>
+<button type="button" class="btn btn-primary">
+	<%= link_to 'Back', craftings_path %>
+</button>
+</div>

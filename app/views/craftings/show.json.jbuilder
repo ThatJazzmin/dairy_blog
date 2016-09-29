@@ -1,0 +1,1 @@
+json.partial! "craftings/crafting", crafting: @crafting

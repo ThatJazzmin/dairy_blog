@@ -1,0 +1,39 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Travels</h1>
+
+
+<% @travels.each do |travel| %>
+      <div class="entry col-sm-12">
+        <p class="col-lg-4 col-md-4 col-sm-12"><%= image_tag travel.image %></p>
+        
+        <h2><%= travel.title %></h2>
+        
+        <p><%= travel.description %></p>
+        
+        <p class="timestamp"><%= travel.created_at.strftime ("%e.%b %Y | %R") %></p>
+
+        <button type="button" class="btn btn-primary"> 
+          <%= link_to 'Show', travel %>
+        </button>
+          
+        <button type="button" class="btn btn-primary">
+          <%= link_to 'Edit', edit_travel_path(travel) %>
+        </button>
+          
+        <button type="button" class="btn btn-primary">
+          <%= link_to 'Destroy', travel, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </button>
+
+      </div>    
+    
+<% end %>
+
+<br>
+
+<button type="button" class="btn btn-success">
+  <%= link_to 'New Travel-Post', new_travel_path %>
+</button>
+</div>

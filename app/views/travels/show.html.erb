@@ -1,0 +1,33 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @travel.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @travel.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%=image_tag "#{@travel.image}" %>
+</p>
+
+<button type="button" class="btn btn-primary">
+	<%= link_to 'Edit', edit_travel_path(@travel) %>
+</button>
+<button type="button" class="btn btn-primary">
+	<%= link_to 'Back', travels_path %>
+</button>
+
+<% if user_signed_in? %>
+	<div>
+		 <%= link_to "Edit Article", edit_travel_path(@travel) %>
+		 <%= link_to "Delete Article", travels_path(@travel), method: :delete, data: { confirm: "Are you sure?" } %>
+	 </div>
+<% end %>	
+
+</div>

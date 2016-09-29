@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.timestamp {
+	font-size: 0.8em;
+	}
+
+
+
+.entry {
+	margin-bottom: 2em;
+	img {width: 100%;
+	}
+		
+}
+
+
+body {
+	background-color: lightblue
+}
+
+button a {
+	color: white
+}
+
+button a:visited {
+	color: white
+}
+
+
+
+/*.background {
+	background: no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+
+}*/
+
+.lala {padding: 0;
+		margin-bottom: 40px;
+		}
+
+.divcolor2 {padding: 0;
+		background-color: white;
+		}
+.divcolor3 {padding: 0;
+		background-color: lightblue;
+		}
+.divcolor4 {padding: 0;
+		background-color: #white;
+		}
+/*background-color: #ede8d8;*/
+
+
+#divbgcolorcontent1 {
+	background-color: #86b7ce;
+}
+
+#divbgcolor {
+	background-color: #2c2e2b;
+	padding-top: 4px;
+	padding-bottom: 0.01em;
+	margin-top: 25px;
+	margin-bottom: 10px;
+
+}
+
+.pheader {
+	text-align:center;
+	font-family: 'Oswald', sans-serif;
+	color: white;
+	text-transform: uppercase;
+	font-size: 1.1em;
+}
+
+.pheader2 {
+	text-align:center;
+	font-family: 'Oswald', sans-serif;
+	color: #2c2e2b;
+	text-transform: uppercase;
+	font-size: 1.1em;
+}
+
+li {
+	font-family: 'Crimson Text', serif;
+	font-size: 0.9em;
+}
+
+.linav {
+	font-family: 'Oswald', sans-serif;
+	
+}
+
+
+.ptext {font-family: 'Crimson Text', serif;
+	color: black;
+	text-align:center;
+	font-size: 0.9em;
+}
+
+
+.thumbimage {
+	display: block;
+    margin: 0 auto;
+    width: 190px;
+    height: auto;
+    border-radius: 23px;
+   	border:1px solid lightgray;
+   	padding: 5px
+
+	
+}
+
+.divred-flourish {
+   border-top: dotted 1px gray;
+   
+   width: 90%;
+   display: block;
+   margin: 0 auto;
+}
+
+
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
