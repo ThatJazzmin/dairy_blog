@@ -1,6 +1,6 @@
 class TravelsController < ApplicationController
   before_action :set_travel, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, only: [:edit, :new, :destroy, :create, :update]
   # GET /travels
   # GET /travels.json
   def index
