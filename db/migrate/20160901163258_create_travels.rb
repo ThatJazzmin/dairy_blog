@@ -1,6 +1,6 @@
-class CreateTravels < ActiveRecord::Migration
+class CreatePosts < ActiveRecord::Migration
   def change
-    create_table :travels do |t|
+    create_table :posts do |t|
       t.string :title
       t.text :description
       t.string :image

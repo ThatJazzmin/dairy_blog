@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class TravelsControllerTest < ActionController::TestCase
+class PostsControllerTest < ActionController::TestCase
   setup do
-    @travel = travels(:one)
+    @post = posts(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:travels)
+    assert_not_nil assigns(:posts)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class TravelsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create travel" do
-    assert_difference('Travel.count') do
-      post :create, travel: { description: @travel.description, image: @travel.image, title: @travel.title }
+  test "should create post" do
+    assert_difference('Post.count') do
+      post :create, post: { description: @post.description, image: @post.image, title: @post.title }
     end
 
-    assert_redirected_to travel_path(assigns(:travel))
+    assert_redirected_to post_path(assigns(:post))
   end
 
-  test "should show travel" do
-    get :show, id: @travel
+  test "should show post" do
+    get :show, id: @post
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @travel
+    get :edit, id: @post
     assert_response :success
   end
 
-  test "should update travel" do
-    patch :update, id: @travel, travel: { description: @travel.description, image: @travel.image, title: @travel.title }
-    assert_redirected_to travel_path(assigns(:travel))
+  test "should update post" do
+    patch :update, id: @post, post: { description: @post.description, image: @post.image, title: @post.title }
+    assert_redirected_to post_path(assigns(:post))
   end
 
-  test "should destroy travel" do
-    assert_difference('Travel.count', -1) do
-      delete :destroy, id: @travel
+  test "should destroy post" do
+    assert_difference('Post.count', -1) do
+      delete :destroy, id: @post
     end
 
-    assert_redirected_to travels_path
+    assert_redirected_to posts_path
   end
 end

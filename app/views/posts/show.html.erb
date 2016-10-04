@@ -1,0 +1,39 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @post.category %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%=image_tag "#{@post.image}", :style => "width: 50%; margin-top: 0px;" %>
+  
+</p>
+
+<button type="button" class="btn btn-primary">
+	<%= link_to 'Edit', edit_post_path(@post) %>
+</button>
+<button type="button" class="btn btn-primary">
+	<%= link_to 'Back', home_path %>
+</button>
+
+<% if user_signed_in? %>
+	<div>
+		 <%= link_to "Edit Article", edit_post_path(@post) %>
+		 <%= link_to "Delete Article", posts_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+	 </div>
+<% end %>	
+
+</div>

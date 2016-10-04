@@ -22,21 +22,20 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active linav"><a href="home">Home</a></li>
-        <li class="linav"><a href="travel">Travel</a></li>
+       <!-- 
+        <li class="linav"><a href="post">Post</a></li>
         <li class="linav"><a href="crafting">Crafting</a></li> 
         <li class="linav"><a href="sports">Sports</a></li>
         <li class="linav"><a href="art">Art</a></li>
+        -->
         <li class="linav"><a href="profile">Portfolio</a></li>  
-        <li>
+        <li class="linav">
           <% if user_signed_in? %>
-              <div>
-          <%= link_to "Sign out", destroy_user_session_path(@travel), method: :delete, data: { confirm: "Are you sure?" } %>
-          </div>
+              
+          <%= link_to "Sign out", destroy_user_session_path(@post), method: :delete, data: { confirm: "Are you sure?" } %> 
+          
         </li>
 <% end %>
-
-
-
         </li>
 
       </ul>

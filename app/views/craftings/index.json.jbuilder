@@ -1,1 +1,0 @@
-json.array! @craftings, partial: 'craftings/crafting', as: :crafting

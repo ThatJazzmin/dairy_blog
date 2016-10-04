@@ -1,18 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :arts
-  resources :sports
-  resources :craftings
-  resources :travels
+  resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'travels#index'
+  root 'posts#index'
 
-  get 'profile' => 'travels#profile'
+  get 'profile' => 'posts#profile'
 
-  get 'travel' => 'travels#index'
+  get 'post' => 'posts#index'
 
   get 'crafting' => 'craftings#index'
 
